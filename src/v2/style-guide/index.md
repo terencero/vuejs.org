@@ -2,7 +2,7 @@
 type: style-guide
 ---
 
-# Style Guide <sup class="beta">beta</sup>
+# Style Guide (Edited by and for Zoro)<sup class="beta">beta</sup>
 
 This is the official style guide for Vue-specific code. If you use Vue in a project, it's a great reference to avoid errors, bikeshedding, and anti-patterns. However, we don't believe that any style guide is ideal for all teams or projects, so mindful deviations are encouraged based on past experience, the surrounding tech stack, and personal values.
 
@@ -36,6 +36,10 @@ Where multiple, equally good options exist, an arbitrary choice can be made to e
 
 Some features of Vue exist to accommodate rare edge cases or smoother migrations from a legacy code base. When overused however, they can make your code more difficult to maintain or even become a source of bugs. These rules shine a light on potentially risky features, describing when and why they should be avoided.
 
+## ZORO Exceptions
+
+This document has been edited to indicate where Zoro intends to follow a rule, ignore a rule, or follow a rule with modification. Rules that are not applicable because they are specific to Vue will be noted as @ZORO Ignore. Rules that are aggreed upon by Zoro will be noted as @ZORO Note. Exceptions/modifications to rules will be noted with @ZORO Exception.
+
 
 
 ## Priority A Rules: Essential (Error Prevention)
@@ -44,7 +48,7 @@ Some features of Vue exist to accommodate rare edge cases or smoother migrations
 
 ### Multi-word component names <sup data-p="a">essential</sup>
 
-Ignore
+## Ignore for Zoro
 
 **Component names should always be multi-word, except for root `App` components.**
 
