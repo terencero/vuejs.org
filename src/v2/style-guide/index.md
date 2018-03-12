@@ -48,7 +48,7 @@ Some features of Vue exist to accommodate rare edge cases or smoother migrations
 
 This [prevents conflicts](http://w3c.github.io/webcomponents/spec/custom/#valid-custom-element-name) with existing and future HTML elements, since all HTML elements are a single word.
 
-{% raw %}<div class="style-example example-bad">{% endraw %}
+<div class="style-example example-bad">
 #### Bad
 
 ``` js
