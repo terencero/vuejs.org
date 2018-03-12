@@ -48,7 +48,7 @@ This document has been edited to indicate where Zoro intends to follow a rule, i
 
 ### Multi-word component names <sup data-p="a">essential</sup>
 
-## Ignore for Zoro
+>## @ZORO Ignore
 
 **Component names should always be multi-word, except for root `App` components.**
 
