@@ -571,6 +571,8 @@ Beyond the `scoped` attribute, using unique class names can help ensure that 3rd
 
 ### Private property names <sup data-p="a">essential</sup>
 
+>## @ZORO Ignore
+
 **Always use the `$_` prefix for custom private properties in a plugin, mixin, etc. Then to avoid conflicts with code by other authors, also include a named scope (e.g. `$_yourPluginName_`).**
 
 
@@ -1751,6 +1753,8 @@ By default, Vue updates the DOM as efficiently as possible. That means when swit
 
 ### Element selectors with `scoped` <sup data-p="d">use with caution</sup>
 
+>## @ZORO Ignore
+
 **Element selectors should be avoided with `scoped`.**
 
 Prefer class selectors over element selectors in `scoped` styles, because large numbers of element selectors are slow.
@@ -1896,6 +1900,8 @@ Vue.component('TodoItem', {
 
 
 ### Non-flux state management <sup data-p="d">use with caution</sup>
+
+>## @ZORO Ignore
 
 **[Vuex](https://github.com/vuejs/vuex) should be preferred for global state management, instead of `this.$root` or a global event bus.**
 
