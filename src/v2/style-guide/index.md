@@ -38,7 +38,7 @@ Some features of Vue exist to accommodate rare edge cases or smoother migrations
 
 ## ZORO Exceptions
 
-This document has been edited to indicate where Zoro intends to follow a rule, ignore a rule, or follow a rule with modification. Rules that are not applicable because they are specific to Vue will be noted as @ZORO Ignore. Rules that are aggreed upon by Zoro will be noted as @ZORO Note. Exceptions/modifications to rules will be noted with @ZORO Exception.
+This document has been edited to indicate where Zoro intends to follow a rule, ignore a rule, or follow a rule with modification. Rules that are not applicable because they are specific to Vue will be noted as @ZORO Ignore. Exceptions/modifications to rules will be noted with @ZORO Exception. Issues that need to be revisited will be noted with @ZORO TODO. 
 
 
 
@@ -661,6 +661,8 @@ var myGreatMixin = {
 
 
 ### Component files <sup data-p="b">strongly recommended</sup>
+>## @ZORO Exception
+    Vue uses camel casing for components; however ZORO will prefer hyphenated casing for component file names.
 
 **Whenever a build system is available to concatenate files, each component should be in its own file.**
 
@@ -735,7 +737,9 @@ components/
 
 
 ### Base component names <sup data-p="b">strongly recommended</sup>
-
+>## @ZORO Exception
+    Use partials folder in components’ folder and put base components in there.
+      
 **Base components (a.k.a. presentational, dumb, or pure components) that apply app-specific styling and conventions should all begin with a specific prefix, such as `Base`, `App`, or `V`.**
 
 
@@ -1049,6 +1053,8 @@ Unfortunately, HTML doesn't allow custom elements to be self-closing - only [off
 
 
 ### Component name casing in templates <sup data-p="b">strongly recommended</sup>
+>## @ZORO Exception
+    Agree, but use camelCase not pascal case
 
 **In most projects, component names should always be PascalCase in [single-file components](../guide/single-file-components.html) and string templates - but kebab-case in DOM templates.**
 
@@ -1105,6 +1111,8 @@ OR
 
 
 ### Component name casing in JS/JSX <sup data-p="b">strongly recommended</sup>
+>## @ZORO Exception
+    Agree, but use camelCase not pascal case
 
 **Component names in JS/[JSX](../guide/render-function.html#JSX) should always be PascalCase, though they may be kebab-case inside strings for simpler applications that only use global component registration through `Vue.component`.**
 
@@ -1210,6 +1218,8 @@ components/
 
 
 ### Prop name casing <sup data-p="b">strongly recommended</sup>
+>## @ZORO Exception
+    Agree, but vue props are opts in riot.js.
 
 **Prop names should always use camelCase during declaration, but kebab-case in templates and [JSX](../guide/render-function.html#JSX).**
 
@@ -1422,6 +1432,8 @@ While attribute values without any spaces are not required to have quotes in HTM
 
 
 ### Directive shorthands <sup data-p="b">strongly recommended</sup>
+>## @ZORO TODO
+    Need to revisit.
 
 **Directive shorthands (`:` for `v-bind:` and `@` for `v-on:`) should be used always or never.**
 
@@ -1483,6 +1495,8 @@ While attribute values without any spaces are not required to have quotes in HTM
 
 
 ### Component/instance options order <sup data-p="c">recommended</sup>
+>## @ZORO TODO
+    Need to revisit with Stampit specific options order.
 
 **Component/instance options should be ordered consistently.**
 
@@ -1534,6 +1548,9 @@ This is the default order we recommend for component options. They're split into
 
 
 ### Element attribute order <sup data-p="c">recommended</sup>
+>## @ZORO TODO
+    (what we do: Id(ref), class, order of perceived importance)
+    TODO: come back to this looking at actual code
 
 **The attributes of elements (including components) should be ordered consistently.**
 
@@ -1579,6 +1596,8 @@ This is the default order we recommend for component options. They're split into
 
 
 ### Empty lines in component/instance options <sup data-p="c">recommended</sup>
+>## @ZORO Exception
+    Agree with second ‘good’ example
 
 **You may want to add one empty line between multi-line properties, particularly if the options can no longer fit on your screen without scrolling.**
 
@@ -1643,6 +1662,7 @@ computed: {
 
 
 ### Single-file component top-level element order <sup data-p="c">recommended</sup>
+>## @ZORO Ignore
 
 **[Single-file components](../guide/single-file-components.html) should always order `<script>`, `<template>`, and `<style>` tags consistently, with `<style>` last, because at least one of the other two is always necessary.**
 
@@ -1701,7 +1721,8 @@ computed: {
 ## Priority D Rules: Use with Caution (Potentially Dangerous Patterns)
 
 
-
+>## @ZORO TODO
+    Need to revisit to address riot.js
 ### `v-if`/`v-if-else`/`v-else` without `key` <sup data-p="d">use with caution</sup>
 
 **It's usually best to use `key` with `v-if` + `v-else`, if they are the same element type (e.g. both `<div>` elements).**
@@ -1807,6 +1828,8 @@ button {
 
 
 ### Implicit parent-child communication <sup data-p="d">use with caution</sup>
+>## @ZORO Exception
+    Agree with props down events up philosophy, but disagree with not copying over to opts(props) due to performance.  Opts documentation to review the disagree.
 
 **Props and events should be preferred for parent-child component communication, instead of `this.$parent` or mutating props.**
 
