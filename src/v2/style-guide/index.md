@@ -1256,7 +1256,9 @@ props: {
 
 
 ### Multi-attribute elements <sup data-p="b">strongly recommended</sup>
-
+>## @ZORO Exception
+  Agree, but attributes will span multiple lines when line exceeds 110 characters.
+  
 **Elements with multiple attributes should span multiple lines, with one attribute per line.**
 
 In JavaScript, splitting objects with multiple properties over multiple lines is widely considered a good convention, because it's much easier to read. Our templates and [JSX](../guide/render-function.html#JSX) deserve the same consideration.
